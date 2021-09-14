@@ -4,6 +4,8 @@
         "hospitalLabel": "Szpital w Pillbox",
         "hospitalBlipCoords": {"x": 300.342, "y": -585.006, "z": 42.282},
         "hospitalDoctorCoords": {"x": 0, "y": 0, "z": 0},
-        "hospitalDoctorPedModel": "s_m_m_doctor_01`"
+        "hospitalDoctorPedModel": "s_m_m_doctor_01`",
+        "hospitalSceneBedCoords": {"x": 0, "y": 0, "z": 0},
+        "hospitalSceneBedModel": ""
     }
 ]
