@@ -1,0 +1,20 @@
+body {
+    background-color: #7289DA;
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    height: auto;
+    font-size: 19pt;
+    font-weight: 500;
+    padding: 7px;
+    box-shadow: 3px 3px 8px 0px black;
+    background-color: rgb(240, 240, 240);
+}

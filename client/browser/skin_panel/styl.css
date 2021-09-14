@@ -1,0 +1,1863 @@
+body {
+    margin: 0;
+    font: 300 16px/18px 'Lato';
+}
+
+.char_info_dialog {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 5px solid red;
+    border-left: 5px solid red;
+    display: inline-flex;
+}
+
+.input {
+    border: none;
+    padding: 3px;
+    box-sizing: border-box;
+    outline: none;
+    display: block;
+    background: transparent;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.7);
+    color: whitesmoke;
+}
+
+.input:focus {
+    border-left: 2px solid rgba(255, 0, 0, 0.7);
+    
+}
+
+.group {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.header {
+    color: red;
+    padding-left: 5px;
+    line-height: 25px;
+}
+
+.button {
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid red;
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: deepskyblue;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.radio {
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 14px;
+    margin: 15px;
+    color: whitesmoke;
+}
+
+.radio .label {
+    position: relative;
+    display: block;
+    top: 20px;
+    left: 30px;
+    float: left;
+    margin-right: 10px;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #c8ccd4;
+    border-radius: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.radio .label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: #225cff;
+    transform: scale(0);
+    transition: all 0.2s ease;
+    opacity: 0.08;
+    pointer-events: none;
+}
+.radio:hover .label:after {
+    transform: scale(3.6);
+}
+input[type="radio"]:checked + .label {
+    border-color: #225cff;
+}
+input[type="radio"]:checked + .label:after {
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+    opacity: 1;
+}
+
+.char_sex {
+    display: none;
+}
+
+.label_group {
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.char_style {
+    display: inline-flex;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    border-left: 5px solid red;
+    bottom: 0px;
+    right: 0px;
+}
+
+.char_style_tabs {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    padding-bottom: 17px;
+}
+
+.tab {
+    margin: auto;
+    padding: 51px;
+    position: relative;
+    top: 80px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.active {
+    margin: auto;
+    padding: 51px;
+    position: relative;
+    top: 80px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: darkviolet;
+}
+
+#wyglad {
+    background: url(assets/wyglad2.png) no-repeat;
+    background-size: 30%;
+    background-position: top;
+    padding-bottom: 17px;
+    padding-top: 65px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+#wlosy_zarost {
+    background: url(assets/wlosy_zarost2.png) no-repeat;
+    background-size: 37%;
+    background-position: center;
+    background-position-y: -11px;
+    padding-bottom: 17px;
+    padding-top: 65px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+#ubior {
+    background: url(assets/ubior2.png) no-repeat;
+    background-size: 32%;
+    background-position: center;
+    background-position-y: 5px;
+    padding-bottom: 17px;
+    padding-top: 65px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    background-color: cyan;
+} 
+
+.ojciec {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ojciec:checked + img {
+    outline: 2px solid #f00;
+}
+
+.ojciec_img {
+    width: 20%;
+}
+
+.twarz_ojciec {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.label_ojciec {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.matka {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.matka:checked + img {
+    outline: 2px solid #f00;
+}
+
+.matka_img {
+    width: 20%;
+}
+
+.twarz_matka {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.label_matka {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.scrollbar {
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: transparent;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.force-overflow {
+	min-height: 450px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+.type-range {
+    -webkit-box-sizing: border-box;
+    /*box-sizing: border-box; */
+    width: fit-content;
+    border-radius: 200px;
+    padding: 12px 15px 15px;
+    background-color: rgba(56, 58, 64, 0.6);
+    margin-bottom: 15px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    /* Hides the slider so that custom slider can be made */
+    width: 350px;
+    /* Specific width is required for Firefox. */
+    background: transparent;
+    /* Otherwise white in Chrome */
+    vertical-align: middle;
+    padding: 0 10px; 
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+}
+
+input[type=range]:focus {
+    outline: none;
+/* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ 
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent; 
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -6px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */ 
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    background: #ffffff;
+    cursor: pointer; 
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    background: #ffffff;
+    cursor: pointer; 
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 330px;
+    height: 2px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+input[type=range]::-moz-range-track {
+    width: 330px;
+    height: 2px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+input[type=range]::-ms-track {
+    width: 330px;
+    height: 2px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent; 
+}
+
+input[type=range]::-ms-fill-lower {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+input[type=range]::-ms-fill-upper {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: rgba(255, 255, 255, 0.2); 
+}
+  
+.arrow-left {
+    width: 14px;
+    height: 14px;
+    text-decoration: none;
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("assets/arrow-left.png") no-repeat;
+    background-size: cover;
+    margin-left: 5px; 
+}
+
+.arrow-right {
+    width: 14px;
+    height: 14px;
+    text-decoration: none;
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("assets/arrow-right.png") no-repeat;
+    background-size: cover; 
+}
+
+.podobienstwo_range_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_podobienstwo {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.label_kolor_oczu {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.custom-radios div {
+    display: inline-block;
+}
+.custom-radios input[type="radio"] {
+    display: none;
+}
+.custom-radios input[type="radio"] + label {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.custom-radios input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    line-height: 44px;
+}
+.custom-radios input[type="radio"] + label span img {
+    opacity: 0;
+    transition: all .3s ease;
+}
+.custom-radios input[type="radio"]#color-1 + label span {
+    background-color: rgb(82, 94, 55);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-2 + label span {
+    background-color: rgb(38, 52, 25);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-3 + label span {
+    background-color: rgb(131, 183, 213);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-4 + label span {
+    background-color: rgb(62, 102, 163);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-5 + label span {
+    background-color: rgb(141, 104, 51);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-6 + label span {
+    background-color: rgb(82, 55, 17);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-7 + label span {
+    background-color: rgb(208, 132, 24);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-8 + label span {
+    background-color: rgb(62, 102, 163);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]#color-9 + label span {
+    background-color: rgb(13, 13, 12);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+.custom-radios input[type="radio"]:checked + label span img {
+    opacity: 1;
+}
+
+.eye_color_div {
+    margin: 15px;
+}
+
+.section_one {
+    /* display: inline-block; */
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+}
+
+.custom-radios input[type="radio"]#skin_color_radio_1 + label span {
+    background-color: rgb(236, 200, 174);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+.custom-radios input[type="radio"]#skin_color_radio_2 + label span {
+    background-color: rgb(206, 152, 116);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+.custom-radios input[type="radio"]#skin_color_radio_3 + label span {
+    background-color: rgb(146, 90, 65);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+.custom-radios input[type="radio"]#skin_color_radio_4 + label span {
+    background-color: rgb(78, 58, 38);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+.skin_color_div {
+    margin: 15px;
+}
+
+.label_kolor_skory {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.tradzik_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_tradzik {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.skazy_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_skazy {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.piegi_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_piegi {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.zmarszczki_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_zmarszczki {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.intenstywnosc_zmarszczek_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_intenstywnosc_zmarszczek {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.fryzura_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_fryzura {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.custom-radios-wlosy div {
+    display: inline-block;
+}
+
+.custom-radios-wlosy input[type="radio"] {
+    display: none;
+}
+
+.custom-radios-wlosy input[type="radio"] + label {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.custom-radios-wlosy input[type="radio"] + label span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    line-height: 44px;
+}
+
+.custom-radios-wlosy input[type="radio"] + label span img {
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_1 + label span {
+    background-color: rgb(29, 29, 26);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_2 + label span {
+    background-color: rgb(75, 57, 45);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_3 + label span {
+    background-color: rgb(122, 59, 31);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_4 + label span {
+    background-color: rgb(163, 86, 49);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_5 + label span {
+    background-color: rgb(169, 111, 73);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_6 + label span {
+    background-color: rgb(189, 141, 94);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_7 + label span {
+    background-color: rgb(203, 166, 111);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_8 + label span {
+    background-color: rgb(232, 190, 120);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_9 + label span {
+    background-color: rgb(208, 158, 106);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_10 + label span {
+    background-color: rgb(153, 53, 36);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_11 + label span {
+    background-color: rgb(156, 22, 17);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_12 + label span {
+    background-color: rgb(209, 56, 30);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_13 + label span {
+    background-color: rgb(200, 88, 49);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_14 + label span {
+    background-color: rgb(148, 122, 103);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_15 + label span {
+    background-color: rgb(216, 193, 172);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_16 + label span {
+    background-color: rgb(115, 79, 97);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_17 + label span {
+    background-color: rgb(173, 71, 106);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_18 + label span {
+    background-color: rgb(255, 174, 188);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_19 + label span {
+    background-color: rgb(8, 154, 141);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_20 + label span {
+    background-color: rgb(48, 144, 96);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_21 + label span {
+    background-color: rgb(163, 192, 21);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_22 + label span {
+    background-color: rgb(238, 200, 92);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_23 + label span {
+    background-color: rgb(254, 139, 16);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#wlosy_kolor_24 + label span {
+    background-color: rgb(212, 11, 14);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.kolor_wlosow_div {
+    margin: 15px;
+}
+
+.kolor_brwi_div {
+    margin: 15px;
+}
+
+.label_kolor_wlosow {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.brwi_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_brwi {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.brwi_grubosc_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_grubosc_brwi {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.broda_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_broda {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.broda_gestosc_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_gestosc_brody {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.section_two {
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_1 + label span {
+    background-color: rgb(29, 29, 26);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_2 + label span {
+    background-color: rgb(75, 57, 45);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_3 + label span {
+    background-color: rgb(122, 59, 31);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_4 + label span {
+    background-color: rgb(163, 86, 49);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_5 + label span {
+    background-color: rgb(169, 111, 73);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_6 + label span {
+    background-color: rgb(189, 141, 94);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_7 + label span {
+    background-color: rgb(203, 166, 111);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_8 + label span {
+    background-color: rgb(232, 190, 120);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_9 + label span {
+    background-color: rgb(208, 158, 106);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_10 + label span {
+    background-color: rgb(200, 88, 49);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_11 + label span {
+    background-color: rgb(148, 122, 103);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#broda_kolor_12 + label span {
+    background-color: rgb(216, 193, 172);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+
+.kolor_brody_div {
+    margin: 15px;
+}
+
+.label_kolor_brody {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.label_kolor_brwi {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.glowa_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_glowa {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.tab_ubior {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 500px;
+    position: absolute;
+    right: 0;
+}
+
+.okulary_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_okulary {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.uszy_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_uszy {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.tops_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_tops {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.tops_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_tops_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.tshirt_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_tshirt_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.ramiona_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_ramiona_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+
+.spodnie_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_spodnie_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.buty_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_buty_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.glowa_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_glowa_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.okulary_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_okulary_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.uszy_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_uszy_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+
+.akcesoria_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_akcesoria_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+
+.oznaczenia_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_oznaczenia_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+
+.kamizelki_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_kamizelki_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.torby_variations_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_torby_variations {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.spodnie_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_spodnie {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.ramiona_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_ramiona {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.buty_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_buty {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.akcesoria_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_akcesoria {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.tshirt_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_tshirt {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.torby_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_torby {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.kamizelki_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_kamizelki {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.oznaczenia_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_oznaczenia {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.makeup_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_makeup {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.intensivity_makeup_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+.label_intensivity_makeup {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.szminka_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_szminka {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.intensivity_szminka_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+.label_intensivity_szminka {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.piegi_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.label_piegi {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.intensivity_piegi_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+.label_intensivity_piegi {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.skazy_intenstynosc_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+.label_skazy_intenstynosc {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.rumience_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+.label_rumience {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.intensivity_rumience_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+.label_intensivity_rumience {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+
+.label_postarzenie {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.postarzenie_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.intensivity_postarzenie_slider_div {
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+.label_intensivity_postarzenie {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+
+.section_three {
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+}
+
+.section_four {
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+}
+
+.section_five {
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+}
+
+.section_six {
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+}
+
+.section_seven {
+    border-bottom: 2px solid gray;
+}
+
+.section_eight {
+    border-bottom: 2px solid gray;
+}
+
+.rumience_color_div {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.label_color_rumience {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_1 + label span {
+    background-color: rgb(239, 77, 83);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_2 + label span {
+    background-color: rgb(247, 105, 131);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_3 + label span {
+    background-color: rgb(242, 136, 136);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_4 + label span {
+    background-color: rgb(217, 132, 135);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_5 + label span {
+    background-color: rgb(218, 99, 97);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_6 + label span {
+    background-color: rgb(139, 55, 53);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_7 + label span {
+    background-color: rgb(108, 68, 62);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_8 + label span {
+    background-color: rgb(123, 89, 78);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_9 + label span {
+    background-color: rgb(234, 201, 166);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_10 + label span {
+    background-color: rgb(217, 171, 146);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_11 + label span {
+    background-color: rgb(188, 128, 100);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_12 + label span {
+    background-color: rgb(188, 112, 85);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_13 + label span {
+    background-color: rgb(196, 101, 65);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_14 + label span {
+    background-color: rgb(224, 163, 155);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_15 + label span {
+    background-color: rgb(236, 184, 182);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_16 + label span {
+    background-color: rgb(244, 198, 208);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_17 + label span {
+    background-color: rgb(246, 177, 201);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_18 + label span {
+    background-color: rgb(242, 101, 170);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_19 + label span {
+    background-color: rgb(225, 119, 151);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_20 + label span {
+    background-color: rgb(163, 54, 67);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_21 + label span {
+    background-color: rgb(121, 43, 53);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_22 + label span {
+    background-color: rgb(220, 75, 79);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_23 + label span {
+    background-color: rgb(228, 53, 78);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_24 + label span {
+    background-color: rgb(203, 30, 31);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_25 + label span {
+    background-color: rgb(242, 128, 146);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_26 + label span {
+    background-color: rgb(231, 93, 190);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.custom-radios input[type="radio"]#rumience_color_radio_27 + label span {
+    background-color: rgb(222, 133, 141);
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.makeup_color_div {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+.custom-radios input[type="radio"].makijaz_kolor + label span {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    width: 30;
+    height: 30;
+    margin: 4px 4px 0 0;
+}
+
+.label_color_szminka {
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.label_slider_value {
+    color: rgb(117, 117, 117);
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 5px;
+    margin-right: 50px;
+    text-align: right;
+    margin-top: -20px;
+}
+
+.closeButton {
+    position: absolute;
+    right: 510px;
+    /* float: right; */
+    transform: scale(0.5);
+    /* width: 25px; */
+    /* height: 25px;
+}

@@ -1,0 +1,263 @@
+<link rel="stylesheet" href="styl.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+<link href="lib/noty.css" rel="stylesheet">
+<link href="lib/themes/mint.css" rel="stylesheet">
+<link href="lib/themes/metroui.css" rel="stylesheet">
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+<script src="lib/noty.js" type="text/javascript"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="script.js"></script>
+
+<div class="closeButton">
+        <img src="cross.png" onclick="close()">
+</div>
+
+
+<div class="tab_ubior" id="tab_ubior">
+                <div class="section_one">
+                        <label class="label_tops">Kurtki i koszule</label>
+                        <div class="tops_slider_div" id="tops_slider_div">
+                                <div class="label_slider_value" id="tops_value">0 / 324</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_tops">&nbsp;</a>
+                                        <input value="0" type="range" class="tops_slider" id="tops_slider" min="0" max="324" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_tops">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_tops_variations">Kurtki i koszule - wariant</label>
+                        <div class="tops_variations_slider_div" id="tops_variations_slider_div">
+                                <div class="label_slider_value" id="tops_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_tops_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="tops_slider" id="tops_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_tops_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_tshirt">Koszulki</label>
+                        <div class="tshirt_slider_div" id="tshirt_slider_div">
+                                <div class="label_slider_value" id="tshirt_value">0 / 186</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_tshirt">&nbsp;</a>
+                                        <input value="0" type="range" class="tshirt_slider" id="tshirt_slider" min="0" max="186" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_tshirt">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_tshirt_variations">Koszulki - wariant</label>
+                        <div class="tshirt_variations_slider_div" id="tshirt_variations_slider_div">
+                                <div class="label_slider_value" id="tshirt_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_tshirt_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="tshirt_slider" id="tshirt_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_tshirt_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_ramiona">Ramiona</label>
+                        <div class="ramiona_slider_div" id="ramiona_slider_div">
+                                <div class="label_slider_value" id="ramiona_value">0 / 209</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_ramiona">&nbsp;</a>
+                                        <input value="0" type="range" class="ramiona_slider" id="ramiona_slider" min="0" max="209" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_ramiona">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_ramiona_variations">Ramiona - wariant</label>
+                        <div class="ramiona_variations_slider_div" id="ramiona_variations_slider_div">
+                                <div class="label_slider_value" id="ramiona_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_ramiona_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="ramiona_slider" id="ramiona_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_ramiona_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_spodnie">Spodnie</label>
+                        <div class="spodnie_slider_div" id="spodnie_slider_div">
+                                <div class="label_slider_value" id="spodnie_value">0 / 125</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_spodnie">&nbsp;</a>
+                                        <input value="0" type="range" class="spodnie_slider" id="spodnie_slider" min="0" max="125" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_spodnie">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_spodnie_variations">Spodnie - wariant</label>
+                        <div class="spodnie_variations_slider_div" id="spodnie_variations_slider_div">
+                                <div class="label_slider_value" id="spodnie_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_spodnie_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="spodnie_slider" id="spodnie_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_spodnie_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_buty">Buty</label>
+                        <div class="buty_slider_div" id="buty_slider_div">
+                                <div class="label_slider_value" id="buty_value">0 / 98</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_buty">&nbsp;</a>
+                                        <input value="0" type="range" class="buty_slider" id="buty_slider" min="0" max="98" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_buty">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_buty_variations">Buty - wariant</label>
+                        <div class="buty_variations_slider_div" id="buty_variations_slider_div">
+                                <div class="label_slider_value" id="buty_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_buty_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="buty_slider" id="buty_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_buty_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                </div>
+                <div class="section_two">
+                        <label class="label_glowa">Nakrycia głowy</label>
+                        <div class="label_slider_value" id="glowa_value">-1 / 135</div>
+                        <div class="glowa_slider_div" id="glowa_slider_div">
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_glowa">&nbsp;</a>
+                                        <input value="-1" type="range" class="glowa_slider" id="glowa_slider" min="-1" max="135" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_glowa">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_glowa_variations">Nakrycia głowy - wariant</label>
+                        <div class="glowa_variations_slider_div" id="glowa_variations_slider_div">
+                                <div class="label_slider_value" id="glowa_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_glowa_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="glowa_slider" id="glowa_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_glowa_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_okulary">Okulary</label>
+                        <div class="okulary_slider_div" id="okulary_slider_div">
+                                <div class="label_slider_value" id="okulary_value">0 / 31</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_okulary">&nbsp;</a>
+                                        <input value="0" type="range" class="okulary_slider" id="okulary_slider" min="0" max="31" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_okulary">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_okulary_variations">Okulary - wariant</label>
+                        <div class="okulary_variations_slider_div" id="okulary_variations_slider_div">
+                                <div class="label_slider_value" id="okulary_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_okulary_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="okulary_slider" id="okulary_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_okulary_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_uszy">Uszy</label>
+                        <div class="uszy_slider_div" id="uszy_slider_div">
+                                <div class="label_slider_value" id="uszy_value">0 / 40</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_uszy">&nbsp;</a>
+                                        <input value="0" type="range" class="uszy_slider" id="uszy_slider" min="0" max="40" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_uszy">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_uszy_variations">Uszy - wariant</label>
+                        <div class="uszy_variations_slider_div" id="uszy_variations_slider_div">
+                                <div class="label_slider_value" id="uszy_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_uszy_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="uszy_slider" id="uszy_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_uszy_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_akcesoria">Akcesoria</label>
+                        <div class="akcesoria_slider_div" id="akcesoria_slider_div">
+                                <div class="label_slider_value" id="akcesoria_value">0 / 132</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_akcesoria">&nbsp;</a>
+                                        <input value="0" type="range" class="akcesoria_slider" id="akcesoria_slider" min="0" max="132" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_akcesoria">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_akcesoria_variations">Akcesoria - wariant</label>
+                        <div class="akcesoria_variations_slider_div" id="akcesoria_variations_slider_div">
+                                <div class="label_slider_value" id="akcesoria_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_akcesoria_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="v_slider" id="akcesoria_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_akcesoria_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_oznaczenia">Oznaczenia</label>
+                        <div class="oznaczenia_slider_div" id="oznaczenia_slider_div">
+                                <div class="label_slider_value" id="oznaczenia_value">0 / 63</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_oznaczenia">&nbsp;</a>
+                                        <input value="0" type="range" class="oznaczenia_slider" id="oznaczenia_slider" min="0" max="63" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_oznaczenia">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_oznaczenia_variations">Oznaczenia - wariant</label>
+                        <div class="oznaczenia_variations_slider_div" id="oznaczenia_variations_slider_div">
+                                <div class="label_slider_value" id="oznaczenia_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_oznaczenia_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="v_slider" id="oznaczenia_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_oznaczenia_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_kamizelki">Kamizelki</label>
+                        <div class="kamizelki_slider_div" id="kamizelki_slider_div">
+                                <div class="label_slider_value" id="kamizelki_value">0 / 132</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_kamizelki">&nbsp;</a>
+                                        <input value="0" type="range" class="kamizelki_slider" id="kamizelki_slider" min="0" max="132" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_kamizelki">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_kamizelki_variations">Kamizelki - wariant</label>
+                        <div class="kamizelki_variations_slider_div" id="kamizelki_variations_slider_div">
+                                <div class="label_slider_value" id="kamizelki_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_kamizelki_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="v_slider" id="kamizelki_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_kamizelki_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_torby">Torby i plecaki</label>
+                        <div class="torby_slider_div" id="torby_slider_div">
+                                <div class="label_slider_value" id="torby_value">0 / 69</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_torby">&nbsp;</a>
+                                        <input value="0" type="range" class="torby_slider" id="torby_slider" min="0" max="69" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_torby">&nbsp;</a>
+                                </div>
+                        </div>
+                        <label class="label_torby_variations">Torby i plecaki - wariant</label>
+                        <div class="torby_variations_slider_div" id="torby_variations_slider_div">
+                                <div class="label_slider_value" id="torby_variations_value">0 / 100</div>
+                                <div class="label-value" data-legend="" style="display:none;"></div>
+                                <div class="type-range">
+                                        <a href="#" class="arrow-left" id="arrow-left_torby_variations">&nbsp;</a>
+                                        <input value="0" type="range" class="v_slider" id="torby_variations_slider" min="0" max="100" step="1">
+                                        <a href="#" class="arrow-right" id="arrow-right_torby_variations">&nbsp;</a>
+                                </div>
+                        </div>
+                </div>
+        </div>

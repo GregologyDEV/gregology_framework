@@ -1,0 +1,23 @@
+import * as alt from 'alt-client'
+import * as native from 'natives';
+
+import * as base from "/client/base/client.js";
+import * as PlayerList from "/client/base/PlayerList.js";
+import * as login from "/client/login/client.js";
+import * as chat from "/client/chat/client.js";
+import * as contextMenu from "/client/contextmenu/client.js"
+import * as contextMenu_menus from "/client/contextmenu/menus.js"
+import * as vehicles from "/client/vehicles/client.js";
+import * as misc from "/client/utility/misc.js";
+import * as interiors from "/client/utility/interior.js";
+import * as ems from "/client/ems/client.js";
+import * as police from "/client/police/client.js"
+import * as inventory from "/client/inventory/client.js"
+import * as noclip from "/client/admin/noclip.js"
+import * as time from "/client/time/client.js"
+import * as voice from "/client/voice/client.js"
+import * as radio from "/client/voice/radio.js"
+import * as entitySync from "/client/entitysync/entitysync.js"
+import * as entitySyncIndex from "/client/entitysync/index.js"
+import * as entitySynctextlabel from "/client/entitysync/textlabel.js"
+import * as entitySyncPed from "/client/entitysync/ped.js"

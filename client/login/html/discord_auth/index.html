@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="app" class="application">
+            <div class="container" v-if="show">
+                <img src="img/Discord-Logo.png" style="width: 500px;">
+                <h2 style="color: white; font-size: 23pt;">Weryfikacja użytkownika</h2>
+                <p style="color: white; font-size: 20pt;">Naciśnij przycisk poniżej, aby zalogować się na server.<br> Przejdź następnie do otwartej karty w przeglądarce i postępuj zgodnie z instrukcjami.</p>
+
+                <button class="btn" @click="beginAuth">ZALOGUJ SIĘ</button>
+            </div>
+            <div class="container" v-if="authBegin">
+                <img src="img/Discord-Logo.png" style="width: 500px;">
+                <h2 style="color: white; font-size: 23pt;">Weryfikacja użytkownika</h2>
+                <p style="color: white; font-size: 20pt;">Rozpoczęto weryfikację. Przejdź do otwartej karty w przeglądarce poza grą i potwierdź autoryzację via Discord</p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        <script src="app.js" type="text/javascript"></script>
+    </body>
+</html>

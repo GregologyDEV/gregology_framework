@@ -1,0 +1,171 @@
+[
+    {
+        "weaponName": "weapon_pistol",
+        "weapon_hash": 453432689,
+        "weapon_gxtString": "0xFE4FE1E6",
+        "weapon_ammoType": "AMMO_PISTOL",
+        "components": [
+            {
+                "component_HashKey": "COMPONENT_PISTOL_CLIP_01",
+                "component_hash": 4275109233,
+                "component_gxtString": ""
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_CLIP_02",
+                "component_hash": 3978713628,
+                "component_gxtString": ""
+            },
+            {
+                "component_HashKey": "COMPONENT_AT_PI_FLSH",
+                "component_hash": 899381934,
+                "component_gxtString": ""
+            },
+            {
+                "component_HashKey": "COMPONENT_AT_PI_SUPP_02",
+                "component_hash": 1709866683,
+                "component_gxtString": ""
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_VARMOD_LUXE",
+                "component_hash": 3610841222,
+                "component_gxtString": ""
+            }
+        ]
+    },
+    {
+        "weaponName": "weapon_pistol_mk2",
+        "weapon_hash": 3219281620,
+        "weapon_gxtString": "0x29B8F601",
+        "weapon_ammoType": "AMMO_PISTOL",
+        "components": [
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CLIP_01",
+                "component_hash": 2499030370
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CLIP_02",
+                "component_hash": 1591132456
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CLIP_TRACER",
+                "component_hash": 634039983
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CLIP_INCENDIARY",
+                "component_hash": 733837882
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CLIP_HOLLOWPOINT",
+                "component_hash": 2248057097
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CLIP_FMJ",
+                "component_hash": 1329061674
+            },
+            {
+                "component_HashKey": "COMPONENT_AT_PI_RAIL",
+                "component_hash": 2396306288
+            },
+            {
+                "component_HashKey": "COMPONENT_AT_PI_FLSH_02",
+                "component_hash": 1140676955
+            },
+            {
+                "component_HashKey": "COMPONENT_AT_PI_SUPP_02",
+                "component_hash": 1709866683
+            },
+            {
+                "component_HashKey": "COMPONENT_AT_PI_COMP",
+                "component_hash": 568543123
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO",
+                "component_hash": 1550611612
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_02",
+                "component_hash": 368550800
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_03",
+                "component_hash": 2525897947
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_04",
+                "component_hash": 24902297
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_05",
+                "component_hash": 4066925682
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_06",
+                "component_hash": 3710005734
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_07",
+                "component_hash": 3141791350
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_08",
+                "component_hash": 1301287696
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_09",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_10",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_IND_01",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_02_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_03_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_04_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_05_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_06_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_07_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_08_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_09_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_10_SLIDE",
+                "component_hash": 999999999999
+            },
+            {
+                "component_HashKey": "COMPONENT_PISTOL_MK2_CAMO_IND_01_SLIDE",
+                "component_hash": 999999999999
+            }
+        ]
+    }
+]

@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" href="styl.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+<link href="lib/noty.css" rel="stylesheet">
+<link href="lib/themes/mint.css" rel="stylesheet">
+<link href="lib/themes/metroui.css" rel="stylesheet">
+<script src="lib/noty.js" type="text/javascript"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="script.js"></script>
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Zaloguj się</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Zarejestruj się</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Login</label>
+					<input id="login_user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="password" class="label">Hasło</label>
+					<input id="login_password_input" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Zapamiętaj dane logowania</label>
+				</div>
+				<div class="group">
+					<input onclick="loginAccount()" type="button" class="button" value="Zaloguj">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Zapomniałeś hasła?</a>
+				</div>
+			</div>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Login</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="password" class="label">Hasło</label>
+					<input id="password_input" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="password" class="label">Powtórz hasło</label>
+					<input id="password_input_2" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="email" class="label">EMail</label>
+					<input id="email" type="text" class="input">
+				</div>
+				<div class="group">
+					<input onclick="registerAccount()" type="button" class="button_register" value="Zarejestruj">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<label for="tab-1">Masz już konto?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <div id="alert" class="alert_container">
+	<div class="alert">
+		<h2>UWAGA!</h2>
+		<div class="content"></div>
+		<button id="confirm">Zrozumiałem</button>
+	</div>
+</div> -->
