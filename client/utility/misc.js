@@ -206,6 +206,35 @@ export const pedType = {
 
 /**
  * 
+ * @param {number} pedScriptID 
+ * @param {alt.Vector3} coords Ped destination coords
+ * @param {number} range Default 1.5; used to compare with distance between ped and destination coords. Expresed with GTA Units
+ * @returns {Promise}
+ */
+export async function waitUntilPedReachCoords(pedScriptID, destCoords, range = 1.5) {
+	return new Promise((resolve, reject) => {
+		const timeout = alt.setTimeout(() => {alt.clearInterval(interval); reject(false)}, 30 * 1000)
+		const interval = alt.setInterval(() => {
+			const pedCords = native.getEntityCoords(pedScriptID, false)
+			const dist = distance(pedCords, destCoords)
+			const doesPedExists = native.doesEntityExist(pedScriptID)
+			const isPedDead = native.isPedDeadOrDying(pedScriptID, true)
+			if (!doesPedExists || isPedDead) {
+				reject(false)
+				alt.clearTimeout(timeout)
+				alt.clearInterval(interval)
+			}
+			if (dist < range) {
+				resolve(true)
+				alt.clearTimeout(timeout)
+				alt.clearInterval(interval)
+			}
+		}, 50)
+	})
+}
+
+/**
+ * 
  * @param {string} dict Sprite dictionary name
  * @returns {Promise}
  */
@@ -315,7 +344,20 @@ export function showCursor(value) {
   potentialCount += 1;
 }
 /*
-alt.on("keydown", (key) => {
+alt.on("keydown", async (key) => {
+	if (key === 220) { // \ <= key above enter
+		let taxiDriverHash = native.getHashKey("a_m_o_genstreet_01");
+		native.requestModel(taxiDriverHash);
+		let taxiDriver = native.createPed(5, taxiDriverHash, -490.822, -814.16, 30.0, 0, false, false);
+		alt.setTimeout(() => {
+			native.taskGoStraightToCoord(taxiDriver, -485.617, -800.281, 30.661, 1.0, -1, 0, 1)
+		}, 500)
+		
+		let doesArrived = await waitUntilPedReachCoords(taxiDriver, new alt.Vector3(-485.617, -800.281, 30.661))
+
+		if (doesArrived) alt.log("DOTARL")
+	}
+	
 	let tick;
 	if (key === 220) { // \ <= key above enter
 		let vec1 = new alt.Vector3(200.0439, -805.7406, 30.0659)
